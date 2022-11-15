@@ -9,33 +9,90 @@
 ## 1- Terraform
  Make infrastructre OF GCP 
  
- 1-vpc
+ 1- vpc
  
- 2- managment VM 
+  - one VPC
  
- 3- GKE 
+ 2- subnets
+    
+    Two subnet
+  
+  - one subnet for managment
+  
+  - one subnet for restricted 
+ 
+ 
+ 3- managment VM 
+ 
+  - VM contain gcloud and kubectl to deploy kubernetes 
+  
+  - connect command of cluster to setup the kubeconfig of cluster in vm to deal with cluster 
  
  4- firewall
  
- 5- subnets
+  - allow connect by IAP only 
+ 
+ 
+ 4- GKE 
+ 
+   - one cluster and 2 nodes with subnet range of restricted-cidr
+   
+   - private cluster 
+   
+   - authorized network with subnet range of managment-cidr
+   
  
  6- service account 
+   
+   Two Service account 
+    
+   - one for VM
+   
+   - one for GKE
  
  
 ## 2- Kubernetes 
 
 1- deploy jenkins
 
+  - the offical Image of Jenkins
+
 2- deploy jenkins slave 
 
-3- apply volumes , ns and service account 
+   - build Image of base ubnutu conatin: 
+        - Docker
+        
+        - Kubectl 
+        
+        - gcloud 
+        
+        - helm 
+        
+        - Java
+        
+        
+3- apply volumes to mount Data 
+
+4- namespace  
+
+5- service account 
 
 ## 3- Jenkins 
 
- create pipeline that make:
+1- credinatials of:
+  
+   -  Dockerhub 
+   
+   - cluster kube config 
+   
+   - slave 
+   
+   - servvice account of Mangment VM
+
+ 2- create pipeline that make:
  
- 1- build docker image and push it 
+   - build docker image and push it 
  
- 2- deploy app by kubernetes in GKE cluster 
+   - deploy DEPLOYMENTS by kubernetes in GKE cluster 
  
  
