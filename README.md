@@ -81,13 +81,13 @@
 
 1- credinatials of:
   
-   -  Dockerhub 
+   -  Dockerhub                            --------> to access dockerhub to pull ana push image 
    
-   - cluster kube config 
+   - cluster kube config                   --------> to access cluster to deploy the yamls files
    
-   - slave 
+   - slave                                 --------> to act salve as node to run docker , kubectl and gcloud in Pipeline
    
-   - servvice account of Mangment VM
+   - servvice account of Mangment VM       --------> to authenticate with gcloud 
 
  2- create pipeline that make:
  
