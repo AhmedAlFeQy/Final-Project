@@ -19,6 +19,6 @@ resource "google_compute_instance" "management-vm" {
     subnetwork = var.subnet_name_m
   }
  
- metadata_startup_script = "/home/aalfeqy/final-task/GCP/script.sh"
+ metadata_startup_script = "${file("/home/aalfeqy/final-task/GCP/script.sh")}"
 }
 
