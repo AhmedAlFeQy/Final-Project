@@ -35,9 +35,9 @@
  
  4- GKE 
  
-   - one cluster and 2 nodes with subnet range of restricted-cidr
+   - one cluster and 2 nodes 
    
-   - private cluster 
+   - private cluster and nodes
    
    - authorized network with subnet range of managment-cidr
    
