@@ -15,7 +15,7 @@
  
  2- subnets
     
-    Two subnet
+   Two subnet
   
   - one subnet for managment
   
