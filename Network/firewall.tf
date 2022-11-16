@@ -23,5 +23,5 @@ resource "google_compute_firewall" "ssh-firewall" {
     ports    = ["22","80"]
   }
 
-  #source_tags = ["bastion-vm"]
+ 
 }
