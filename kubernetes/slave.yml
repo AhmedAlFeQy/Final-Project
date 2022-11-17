@@ -23,7 +23,7 @@ spec:
       automountServiceAccountToken: true
       containers:
       - name: slave1
-        image: ahmedalfeqy/slave:latest
+        image: ahmedalfeqy/jslave:latest
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 22
